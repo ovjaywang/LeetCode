@@ -3,9 +3,6 @@ package com.wjy.code;
 import java.util.LinkedList;
 
 public class Trie {
-
-	
-	
 	private TrieNode root;  
 	   
     public Trie(){  
