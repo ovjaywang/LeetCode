@@ -32,8 +32,8 @@ public class Heap {
 		Heap.heapDown(h,index);
 	}
 	public static void heapDown(List<Integer> h,int index){
-		int v = h.get(index);
 		if(h.size()>(index *2)){
+			int v = h.get(index);
 			int left = h.get(index *2);
 			if(h.size()==(index*2+1) ){
 				if( h.get(index)<h.get(index*2)){
@@ -59,10 +59,18 @@ public class Heap {
 		}
 	}
 	public static void modify(List<Integer> h){
-		
+		for (int i = (h.size()-1)/2; i >0; i--) {
+			Heap.heapDown(h, i);
+		}
 	}
-	public static void heapSort(List<Integer> h,int index){
-		
+	public static void heapSort(List<Integer> h){//这里可能要把树清空
+		int size = h.size();
+		for (int i = 1; i < size; i++) {//总体时间复杂度 nlgn 不保持稳定性
+			System.out.print(h.get(1)+" ");
+			h.set(1,h.get( h.size()-1));
+			h.remove(h.size()-1);
+			Heap.heapDown(h, 1);//时间复杂度O(lg(N))
+		}
 	}
 	public static void main(String[] args) {
 		int[] nums={3,5,9,10,2,-1,4,6,1,11,7,8,-3};
@@ -79,8 +87,12 @@ public class Heap {
 		System.out.println("————————————————————————");
 		System.out.println("构建大顶堆（成堆调整法 按完全二叉树排列 然后从最后一个分支节点逆序调整）");
 		List<Integer> h2 = new ArrayList<Integer>();
+		h2.add(0);
 		for (int i : nums) {
-			Heap.heap.add(i);
+			h2.add(i);
 		}
+		Heap.modify(h2);
+		System.out.println(h2);
+		Heap.heapSort(h2);
 	}
 }
