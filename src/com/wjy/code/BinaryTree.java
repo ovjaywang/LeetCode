@@ -7,7 +7,11 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
-
+/**
+ * 二叉树所有基本操作
+ * @author Jay Wang
+ *
+ */
 public class BinaryTree {
 	private static TreeNode r = null;
 	
@@ -462,9 +466,46 @@ public class BinaryTree {
 		 }
 		 return tn;
 	 }
+	 public static void reverseTree(TreeNode p){//递归轴对称翻转树
+		 if(p==null){//这句话绝对不能丢。不然有空指针异常，因为后面操作了p.getLeft();递归的话递归结束条件很重要，所以p==null 判断很重要，不要根节点就不会。要考虑所有情况。  
+	            return;  
+	        }  
+	        if(null==p.left&&null==p.right)  
+	            return;  
+	        TreeNode temp=p.left;  
+	        p.left=p.right;  
+	        p.right=temp;  
+	        reverseTree(p.left);  
+	        reverseTree(p.right); 
+	 }
+	 public static  void reverserLeftAndRight1(TreeNode root) {  
+	        if(root==null){  
+	            return;  
+	        }  
+	        if(null==root.left&&null==root.right)  
+	            return;  
+	        Queue<TreeNode> qu=new LinkedList<TreeNode>();  
+	        qu.add(root);  
+	        TreeNode temp;  
+	        TreeNode q=root;  
+	        while(!qu.isEmpty()){  
+	            q=qu.remove();  
+	            if(null!=q.left){//这个必须有。不然把是null 的也加进来了。  
+	                qu.add(q.left);  
+	            }  
+	            if(null!=q.right){  
+	                qu.add(q.right);  
+	            }  
+	            temp=q.left;  
+	            q.left=q.right;  
+	            q.right=temp;  
+
+	        }  
+	    }  
 	//手动输入节点如下
 //	public static void main(String[] args) {
 //		System.out.println("请输入根：");
+	 
 //		TreeNode root = getInt();
 //		System.out.println("请输入节点：");
 //		TreeNode aNode = getInt();
@@ -540,8 +581,16 @@ public class BinaryTree {
 			System.out.println((tn==null)?"null":tn.val);
 		}
 		
+		System.out.print("\n层次遍历\t");
+		BinaryTree.levelTraverse(r);
+		System.out.println("\n轴对称1");
+		BinaryTree.reverseTree(r);
+		BinaryTree.levelTraverse(r);
+		System.out.println("\n轴对称2");
+		BinaryTree.reverserLeftAndRight1(r);
+		BinaryTree.levelTraverse(r);
 		//BinaryTree.delete1(11);
 		//BinaryTree.delete(0);
-		BinaryTree.delete1(0);
+		//BinaryTree.delete1(0);
 	}
 }

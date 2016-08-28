@@ -10,7 +10,7 @@ import java.util.Stack;
 /**
  * 
  * @author Jay Wang
- * 二叉树的定义 插入 查找 及遍历（前中后的递归 前中后的非递归 层次遍历）
+ * 二叉树节点的定义 多加了一个VisitedTime来记录访问次数 用于非递归后续遍历
  */
 public class TreeNode {//标准二叉查找树
 	public int val;

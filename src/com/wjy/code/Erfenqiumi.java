@@ -1,10 +1,14 @@
 package com.wjy.code;
-
+/**
+ * ¶þ·ÖÇóÃÝ
+ * @author Jay Wang
+ *
+ */
 public class Erfenqiumi {
 	public static void main(String[] args) {
 		Erfenqiumi er = new Erfenqiumi();
-		int a=2;
-		int b=7;
+		int a=5;
+		int b=5;
 		System.out.println(er.getMi(a,b));
 		System.out.println(er.getMi_Feidigui(a, b));
 	}

@@ -1,7 +1,11 @@
 package com.wjy.code;
 
 import java.util.LinkedList;
-
+/**
+ * ¶¨ÒåTrieÊ÷
+ * @author Administrator
+ *
+ */
 public class Trie {
 	private TrieNode root;  
 	   

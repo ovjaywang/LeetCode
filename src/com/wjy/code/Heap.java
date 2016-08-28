@@ -72,6 +72,8 @@ public class Heap {
 			Heap.heapDown(h, 1);// ±º‰∏¥‘”∂»O(lg(N))
 		}
 	}
+	 
+	
 	public static void main(String[] args) {
 		int[] nums={3,5,9,10,2,-1,4,6,1,11,7,8,-3};
 		for (int i : nums) {

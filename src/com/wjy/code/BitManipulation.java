@@ -1,5 +1,9 @@
 package com.wjy.code;
-
+/**
+ * Î»²Ù×÷
+ * @author Jay Wang
+ *
+ */
 public class BitManipulation {
 	void transValue(int a,int b){
 		a ^= b;

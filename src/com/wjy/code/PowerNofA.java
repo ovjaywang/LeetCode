@@ -1,5 +1,10 @@
 package com.wjy.code;
 
+/**
+ * AµÄÖ¸ÊýÃÝ
+ * @author Jay Wang
+ *
+ */
 public class PowerNofA {
 	public static void main(String[] args) {
 		Power(2,8);;

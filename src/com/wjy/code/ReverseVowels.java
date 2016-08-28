@@ -2,7 +2,11 @@ package com.wjy.code;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * ·´×ªÔªÒô×ÖÄ¸
+ * @author Administrator
+ *
+ */
 public class ReverseVowels {
 	public String reverseVowels(String s) {
 		char[] sss = s.toCharArray();

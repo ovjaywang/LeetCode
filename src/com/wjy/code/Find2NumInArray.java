@@ -1,5 +1,10 @@
 package com.wjy.code;
-public class Find2NumInArray {//在一个数列中查找唯二数
+/**
+ * 在一个数列中查找唯二数
+ * @author Administrator
+ *
+ */
+public class Find2NumInArray {
 	public static void main(String[] args) {
 		int[] aa={1,2,3,2,5,6,4,5,6,1,3,8};
 		get2Num(aa);

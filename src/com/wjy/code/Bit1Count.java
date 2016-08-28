@@ -1,5 +1,9 @@
 package com.wjy.code;
-//求二进制数中1的奇偶！！！！！！！！！！！！！
+/**
+ *求二进制数中1的奇偶！！！！！！！！！！！！！
+ *@author Jay Wang 
+ */
+
 public class Bit1Count {
 	public static int get11Count(int x){
 		int i=0;

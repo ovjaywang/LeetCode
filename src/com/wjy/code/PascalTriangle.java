@@ -3,6 +3,11 @@ package com.wjy.code;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ½ğ×ÖËşÊı
+ * @author Jay Wang
+ *
+ */
 public class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
     	List<List<Integer>> ls= new ArrayList<List<Integer>>();
