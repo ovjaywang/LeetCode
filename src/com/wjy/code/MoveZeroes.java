@@ -1,5 +1,9 @@
 package com.wjy.code;
-
+/**
+ * 把0移到数组的末位-双下标法 
+ * @author Administrator
+ *
+ */
 public class MoveZeroes {
     public int[] moveZeroes(int[] nums) {
     	int j = 0;

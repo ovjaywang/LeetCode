@@ -2,24 +2,28 @@ package com.wjy.code;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-
+/**
+ * 返回树的高度和宽度
+ * @author Jay Wang
+ *
+ */
 public class MaxDepth {
-	 public int maxDepth(TreeNode root) {
-		 if (root == null)
-       	  	return 0;
-       else {
-       	  	int left = maxDepth(root.left);
-       	  	int right = maxDepth(root.right);
-       	  	return 1 + Math.max(left, right);
-       	 }
-	    }
-	 public static class TreeNode {
-	    int val;
-	    TreeNode left;
-	    TreeNode right;
-	    TreeNode(int x) { val = x; }
-	  }
-	// 获取最大宽度
+		 public int maxDepth(TreeNode root) {
+			 if (root == null)
+	       	  	return 0;
+	       else {
+	       	  	int left = maxDepth(root.left);
+	       	  	int right = maxDepth(root.right);
+	       	  	return 1 + Math.max(left, right);
+	       	 }
+		    }
+		 public static class TreeNode {
+		    int val;
+		    TreeNode left;
+		    TreeNode right;
+		    TreeNode(int x) { val = x; }
+		  }
+		 // 获取最大宽度
 	    public static int getMaxWidth(TreeNode root) {
 	        if (root == null)
 	            return 0;

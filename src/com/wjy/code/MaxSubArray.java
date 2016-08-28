@@ -1,6 +1,6 @@
 package com.wjy.code;
 /**
- * 获取给定数组中最小子数组（连续）
+ * 获取给定数组中最大和子数组（连续）
  * @author Jay Wang
  *
  */

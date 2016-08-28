@@ -1,4 +1,9 @@
 package com.wjy.code;
+/**
+ * ¾­µä×Ö·û´®Æ¥ÅäËã·¨
+ * @author Administrator
+ *
+ */
 public class KMP {
 	public static void main(String[] args) {
 		String s="abcaabcd";
