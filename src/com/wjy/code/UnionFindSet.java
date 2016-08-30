@@ -65,16 +65,27 @@ public class UnionFindSet {
 	public static void main(String[] args) {
 		int  N =10;
 		UnionFindSet ufs = new UnionFindSet(N);
-		ufs.union(2, 6);//添加相连的元素
-		ufs.union(5, 6);
-		ufs.union(1, 8);
-		ufs.union(2, 9);
-		ufs.union(5, 3);
-		ufs.union(4, 8);
+//		ufs.union(2, 6);//添加相连的元素
+//		ufs.union(5, 6);
+//		ufs.union(1, 8);
+//		ufs.union(2, 9);
+//		ufs.union(5, 3);
+//		ufs.union(4, 8);
+//		ufs.union(4, 0);
+		
+		ufs.union(1, 2);
+		ufs.union(3, 6);
 		ufs.union(4, 0);
+		ufs.union(6, 7);
+		ufs.union(9, 8);	
+		ufs.union(8, 3);
+		ufs.union(8, 2);
+		ufs.union(5, 4);
+
+
+		System.out.println("\n"+ufs.CalculateComponent());
 		for (int i : ufSet) {
 			System.out.print(i+" ");
 		}
-		System.out.println("\n"+ufs.CalculateComponent());;
 	}
 }
