@@ -16,8 +16,23 @@ public class ReverseString {
         }
         return String.valueOf(sss);
     }
+	
+	public String reverseString2(String s){
+		String[] ss = s.split(" ");
+		StringBuilder sb = new StringBuilder();
+		for (int i = ss.length-1; i >-1; i--) {
+			sb.append(ss[i]);
+			if(i!=0){
+				sb.append(" ");
+			}
+		}
+		
+		return sb.toString();
+				
+	}
 	public static void main(String[] args) {
 		ReverseString rs = new ReverseString();
 		System.out.println(rs.reverseString("asdfastjooin"));;
+		System.out.println(rs.reverseString2("I am a student haha."));;
 	}
 }

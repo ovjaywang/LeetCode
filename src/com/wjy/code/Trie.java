@@ -3,7 +3,8 @@ package com.wjy.code;
 import java.util.LinkedList;
 /**
  * ∂®“ÂTrie ˜
- * @author Administrator
+ * @author Jay Wang
+ * LeetCode 208
  *
  */
 public class Trie {
@@ -65,13 +66,16 @@ public class Trie {
         trie.insert("ball");  
         trie.insert("balls");  
         trie.insert("sense");  
-      
+        trie.insert("senseof");
         // testing deletion  
         System.out.println(trie.search("balls"));  
         System.out.println(trie.search("ba"));  
         trie.deleteWord("balls");  
         System.out.println(trie.search("balls"));  
-        System.out.println(trie.search("ball"));  
+        System.out.println(trie.search("ball"));
+
+        System.out.println(trie.search("sensef"));
+        System.out.println(trie.search("senseof"));
     }
     //Tire
 	public class TrieNode {  

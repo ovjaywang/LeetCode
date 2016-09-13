@@ -35,7 +35,7 @@ public class Bit1Count {
 		return count[1];
 	}
 	public static void main(String[] args) {
-		int hhe = 5;
+		int hhe = 555;
 		System.out.println(Integer.toBinaryString(hhe));
 		System.out.println(get11Count(hhe));
 		System.out.println(get1Count(hhe));

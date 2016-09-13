@@ -19,6 +19,7 @@ public class FindMiddleIn2Array {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int i=0,j=0;
         List<Integer> list = new ArrayList<Integer>();
+
         while(i<nums1.length && j<nums2.length){
             if(nums1[i]<=nums2[j]){
                 list.add(nums1[i]);

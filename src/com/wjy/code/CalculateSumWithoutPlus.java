@@ -5,16 +5,19 @@ package com.wjy.code;
  *
  */
 public class CalculateSumWithoutPlus {
-	public int getSum(int a, int b) {
-        String aa=Integer.toBinaryString(a);
-		String bb=Integer.toBinaryString(b);
+	public static void main(String[] args) {
+		System.out.println(CalculateSumWithoutPlus.getSum(333, 777));
+	}
+	public static long getSum(long a, long b) {
+        String aa=Long.toBinaryString(a);
+		String bb=Long.toBinaryString(b);
 		int i=aa.length()-1,j=bb.length()-1;
 		StringBuffer sb = new StringBuffer();
 		int carry = 0;
-		int s,t;
+		long s,t;
 		while(i>=0 && j>=0){
-			s = Integer.valueOf(aa.charAt(i));
-			t = Integer.valueOf(bb.charAt(j));
+			s = Long.valueOf(aa.charAt(i));
+			t = Long.valueOf(bb.charAt(j));
 			if(s==48 && t==48){
 				sb.append(carry);
 				carry = 0;
@@ -34,7 +37,7 @@ public class CalculateSumWithoutPlus {
 			j--;
 		}
 		while(i>=0){
-			s = Integer.valueOf(aa.charAt(i));
+			s = Long.valueOf(aa.charAt(i));
 			if(carry + s<=49){
 				sb.append(carry + s-48);
 			}else{
@@ -44,7 +47,7 @@ public class CalculateSumWithoutPlus {
 			i--;
 		}
 		while(j>=0){
-			t = Integer.valueOf(bb.charAt(j));
+			t = Long.valueOf(bb.charAt(j));
 			if(carry + t<=49){
 				sb.append((carry + t-48));
 			}else{

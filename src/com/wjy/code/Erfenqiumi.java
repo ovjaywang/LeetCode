@@ -7,8 +7,8 @@ package com.wjy.code;
 public class Erfenqiumi {
 	public static void main(String[] args) {
 		Erfenqiumi er = new Erfenqiumi();
-		int a=5;
-		int b=5;
+		int a=4;
+		int b=15;
 		System.out.println(er.getMi(a,b));
 		System.out.println(er.getMi_Feidigui(a, b));
 	}
@@ -29,7 +29,7 @@ public class Erfenqiumi {
 		long ans=1;
 		System.out.println();
 		while(k!=0){
-			System.out.print(ans+" ");
+			//System.out.print(ans+" ");
 			if(k%2==1)
 				ans *= (long)a;
 			k >>=1;

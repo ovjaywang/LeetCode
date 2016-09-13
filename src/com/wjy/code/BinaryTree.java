@@ -13,7 +13,7 @@ import java.util.Stack;
  *
  */
 public class BinaryTree {
-	private static TreeNode r = null;
+	public static TreeNode r = null;
 	
 	public static TreeNode getInt(){
 		Scanner sc = new Scanner(System.in);

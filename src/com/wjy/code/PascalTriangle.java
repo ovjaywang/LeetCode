@@ -31,6 +31,7 @@ public class PascalTriangle {
     	for(int i=0;i<l.size()-1;i++){
     		tmp.add(l.get(i)+l.get(i+1));
     	}
+    	
     	tmp.add(1);
     	llll.add(tmp);
     	return tmp;
